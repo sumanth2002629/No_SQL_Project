@@ -1,0 +1,12 @@
+{
+    "loadData": ["./load/load_b2b.hiveql", "./load/load_matches.hiveql"],
+    "queryData": ["./queries/balls_faced.hiveql"],
+    "visualiseData": [{
+        "location": "/home/sumanth/Documents/sem6/NoSql/Project/query_ops/op1/000000_0",
+        "type": "linePlot",
+        "title": "temp",
+        "xlabel":"X-axis",
+        "ylabel":"Y_axis",
+        "fields" : [0,1]
+    }]
+}

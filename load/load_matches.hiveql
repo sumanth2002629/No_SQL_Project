@@ -1,0 +1,29 @@
+CREATE TABLE IF NOT EXISTS matches (
+    id STRING,
+    city STRING,
+    `date` STRING,
+    season STRING,
+    match_no STRING,
+    team1 STRING,
+    team2 STRING,
+    venue STRING,
+    toss_winner STRING,
+    toss_decision STRING,
+    superover STRING,
+    winningteam STRING,
+    wonby STRING,
+    margin STRING,
+    method STRING,
+    pom STRING,
+    team1_players STRING,
+    team2_players STRING,
+    umpire1 STRING,
+    umpire2 STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE
+LOCATION '/home/sumanth/Documents/sem6/NoSql/Project/matches';
+
+LOAD DATA INPATH '/home/sumanth/Documents/sem6/NoSql/Project/data/IPL_Matches_2008_2022.csv' OVERWRITE INTO TABLE matches;

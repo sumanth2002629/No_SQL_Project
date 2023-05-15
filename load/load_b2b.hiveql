@@ -1,0 +1,26 @@
+CREATE TABLE IF NOT EXISTS b2b (
+    id STRING,
+    innings INT,
+    overs INT,
+    ballnumber INT,
+    batter STRING,
+    bowler STRING,
+    non_striker STRING,
+    extra_type STRING,
+    batsman_run INT,
+    extras_run INT,
+    total_run INT,
+    overthrow INT,
+    iswicket INT,
+    player_out STRING,
+    wicket_kind STRING,
+    fielders_involved STRING,
+    batting_team STRING
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+STORED AS TEXTFILE
+LOCATION '/home/sumanth/Documents/sem6/NoSql/Project/b2b';
+
+LOAD DATA INPATH '/home/sumanth/Documents/sem6/NoSql/Project/data/IPL_Ball_by_Ball_2008_2022.csv' OVERWRITE INTO TABLE b2b;

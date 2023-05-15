@@ -1,0 +1,5 @@
+INSERT OVERWRITE LOCAL DIRECTORY '/home/sumanth/Documents/sem6/NoSql/Project/query_ops/balls_faced'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT batter as batter, count(batter) as balls_faced FROM b2b GROUP BY batter ORDER BY balls_faced DESC LIMIT 5;

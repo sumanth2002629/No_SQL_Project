@@ -1,0 +1,5 @@
+INSERT OVERWRITE LOCAL DIRECTORY '/home/sumanth/Documents/sem6/NoSql/Project/query_ops/pom'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT pom as pom, count(pom) as num_pom FROM matches WHERE pom!='NA' GROUP BY pom ORDER BY num_pom DESC LIMIT 5;

@@ -1,0 +1,5 @@
+INSERT OVERWRITE LOCAL DIRECTORY '/home/sumanth/Documents/sem6/NoSql/Project/query_ops/op1'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT city as city, count(id) as num_matches FROM matches GROUP BY city ORDER BY num_matches DESC LIMIT 5;

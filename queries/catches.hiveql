@@ -1,0 +1,17 @@
+INSERT OVERWRITE LOCAL DIRECTORY '/home/sumanth/Documents/sem6/NoSql/Project/query_ops/catches/2022'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT b2b.fielders_involved as player,count(b2b.wicket_kind) as catches FROM b2b JOIN matches ON b2b.id = matches.id GROUP BY fielders_involved,season,wicket_kind HAVING season='2022' and wicket_kind='caught' ORDER BY catches DESC LIMIT 5; 
+
+INSERT OVERWRITE LOCAL DIRECTORY '/home/sumanth/Documents/sem6/NoSql/Project/query_ops/catches/2021'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT b2b.fielders_involved as player,count(b2b.wicket_kind) as catches FROM b2b JOIN matches ON b2b.id = matches.id GROUP BY fielders_involved,season,wicket_kind HAVING season='2021' and wicket_kind='caught' ORDER BY catches DESC LIMIT 5; 
+
+INSERT OVERWRITE LOCAL DIRECTORY '/home/sumanth/Documents/sem6/NoSql/Project/query_ops/catches/2020'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT b2b.fielders_involved as player,count(b2b.wicket_kind) as catches FROM b2b JOIN matches ON b2b.id = matches.id GROUP BY fielders_involved,season,wicket_kind HAVING season='2020/21' and wicket_kind='caught' ORDER BY catches DESC LIMIT 5; 

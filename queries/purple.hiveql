@@ -1,0 +1,17 @@
+INSERT OVERWRITE LOCAL DIRECTORY '/home/sumanth/Documents/sem6/NoSql/Project/query_ops/purple/2022'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT b2b.bowler as batter,sum(b2b.iswicket) as runs FROM b2b JOIN matches ON b2b.id = matches.id GROUP BY bowler,season HAVING season='2022' ORDER BY runs DESC LIMIT 5; 
+
+INSERT OVERWRITE LOCAL DIRECTORY '/home/sumanth/Documents/sem6/NoSql/Project/query_ops/purple/2021'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT b2b.bowler as batter,sum(b2b.iswicket) as runs FROM b2b JOIN matches ON b2b.id = matches.id GROUP BY bowler,season HAVING season='2021' ORDER BY runs DESC LIMIT 5; 
+
+INSERT OVERWRITE LOCAL DIRECTORY '/home/sumanth/Documents/sem6/NoSql/Project/query_ops/purple/2020'
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+SELECT b2b.bowler as batter,sum(b2b.iswicket) as runs FROM b2b JOIN matches ON b2b.id = matches.id GROUP BY bowler,season HAVING season='2020/21' ORDER BY runs DESC LIMIT 5; 
