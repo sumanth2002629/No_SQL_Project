@@ -53,7 +53,7 @@ function Form() {
     ...value,
     color: colors[index % colors.length],
   }));
-  console.log(dataFormatted);
+  
   return (
     <>
       <div>

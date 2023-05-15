@@ -25,7 +25,7 @@ Navigate to the frontend directory and install the required npm packages:
 
 Start the Flask server by running the following command in the root directory of the project:
 
-    python3 app.py
+    python3 server.py
 In a separate terminal or command prompt, navigate to the client directory and start the React server:
 
     cd frontend
