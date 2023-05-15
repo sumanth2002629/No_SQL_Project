@@ -77,7 +77,6 @@ const ChartData = (props) => {
     id,
     pom: y_pom[index],
   }));
-  console.log(graph_type);
 
   if ( type === "bar" ) {
     return (

@@ -39,7 +39,7 @@ function Form() {
       console.error(error);
     }
   };
-  console.log(data);
+  
   const labels = ["runs", "wickets", "catches"];
   const colors = ["#0088FE", "#000000", "#FFBB28"]; // custom colors
   const chartData = Object.entries(data).map(([key, value]) => ({
@@ -48,7 +48,6 @@ function Form() {
     wickets: value.wickets * 5,
     catches: value.catches * 10,
   }));
-  console.log("Chartdata", chartData);
   const dataFormatted = Object.entries(data).map(([key, value], index) => ({
     player: key,
     ...value,
