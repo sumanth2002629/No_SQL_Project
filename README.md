@@ -15,7 +15,7 @@ Then, follow these instructions:
 
 Clone the repository to your local machine using the command:
 Copy
-git clone https://github.com/username/repo.git
+git clone https://github.com/sumanth2002629/No_SQL_Project
 
 
 Navigate to the frontend directory and install the required npm packages:
